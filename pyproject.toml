@@ -1,0 +1,25 @@
+[project]
+name = "hybrid-rag-engine"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Diego Azpeitia", email = "diego.azpeitia@itti.digital" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.128.8",
+    "google-genai>=1.47.0",
+    "langfuse>=3.7.0",
+    "pydantic-settings>=2.11.0",
+    "qdrant-client>=1.16.1",
+    "sentence-transformers>=5.1.2",
+    "uvicorn>=0.39.0",
+]
+
+[project.scripts]
+hybrid-rag-engine = "hybrid_rag_engine:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
